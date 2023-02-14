@@ -15,7 +15,7 @@ function addPoint(x, y) {
   );
   circle.setAttribute("cx", x*50);
   circle.setAttribute("cy", SVG_HEIGHT - (y*50));
-  circle.setAttribute("r", 5);
+  circle.setAttribute("r", 8);
   circle.setAttribute("fill", "blue");
   circle.setAttribute("class", "circle");
 
@@ -32,6 +32,12 @@ function addPoint(x, y) {
   // is clicked
   circle.addEventListener("click", () => {
     document.getElementById("clickedPoint").innerHTML = "Point clicked: (" + x + "," + y + ")";
+    if (circle.getAttribute("stroke")) {
+      circle.removeAttribute("stroke");
+    } else {
+      circle.setAttribute("stroke", "lightgreen");
+      circle.setAttribute("stroke-width", 2);
+    }
   });
 
   return circle;
