@@ -3,12 +3,38 @@
 
 <head>
     <meta charset=utf-8/>
+    <title>hw-04</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
+    <h1>hw-04: Event Handling</h1>
+    <div class="flex">
+        <div class="left">
+            <div class="left-border"></div>
+            <svg width="500" height="500" id="svg" class="plot">
+            </svg>
+            <div class="bottom-border"></div>
+        </div>
+        <div class="right">
+            <input type="number" id="x-coord" name="x-coord" required
+            maxlength="1" placeholder="X-Coordinate">
+            <input type="number" id="y-coord" name="y-coord" required
+            maxlength="1" placeholder="Y-Coordinate">
+            <button onclick="buttonClick()">Submit Coordinates</button>
+        </div>
+    </div>
+    <h2>Acknowledgements</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Flexbox Layout</a></li>
+        <li><a href="https://www.geeksforgeeks.org/how-to-set-flexbox-having-unequal-width-of-elements-using-css/">Unequal Flexbox Widths</a></li>
+        <li><a href="https://stackoverflow.com/questions/19281122/svg-circle-not-being-drawn-with-javascript">Drawing Circles with Javascript</a></li>
+        <li><a href="https://canvasjs.com/docs/charts/how-to/render-chart-by-accepting-datapoints-from-user-input/">Adding Points to a Chart using Javascript</a></li>
+    </ul>
 
-
+    <script src="main.js"></script>
 </body>
 
 </html>
+
