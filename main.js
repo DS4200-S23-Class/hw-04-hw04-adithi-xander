@@ -18,15 +18,32 @@ function addPoint(x, y) {
   circle.setAttribute("r", 5);
   circle.setAttribute("fill", "blue");
   circle.setAttribute("class", "circle");
+
+  // Changes the color of the point when mouse hovers, and reverts it back to the original color 
+  // when the mouse leaves the point
+  circle.addEventListener("mouseenter", () => {
+    circle.setAttribute("fill", "red");
+  });
+  circle.addEventListener("mouseleave", () => {
+    circle.setAttribute("fill", "blue");
+  });
+
+  // Updates the last point clicked in the right column with the current coordinates when the point 
+  // is clicked
+  circle.addEventListener("click", () => {
+    document.getElementById("clickedPoint").innerHTML = "Point clicked: (" + x + "," + y + ")";
+  });
+
   return circle;
 }
 
-// plot each point into the SVG
+// Plot each point in the initial array into the SVG scatter plot
 data.forEach(pair => {
   svg.appendChild(addPoint(pair[0], pair[1]));
 })
 
-// when the button is clicked, add the point from the input fields onto the scatter plot
+// Function for when the button is clicked, it adds the point from the input fields onto the 
+// scatter plot
 function buttonClick() {
   let x = document.getElementById("x-coord").value;
   let y = document.getElementById("y-coord").value;

@@ -12,6 +12,7 @@ h1, h2 {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  text-align: center;
 }
 
 .left {
@@ -22,14 +23,7 @@ h1, h2 {
   width: 40%;
 }
 
-.left-border {
+.plot {
   border-left: 3px solid black;
-  height: 500px;
-  position: absolute;
-}
-
-.bottom-border {
   border-bottom: 3px solid black;
-  width: 500px;
-  position: absolute;
 }

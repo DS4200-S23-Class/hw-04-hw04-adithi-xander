@@ -12,10 +12,8 @@
     <h1>hw-04: Event Handling</h1>
     <div class="flex">
         <div class="left">
-            <div class="left-border"></div>
             <svg width="500" height="500" id="svg" class="plot">
             </svg>
-            <div class="bottom-border"></div>
         </div>
         <div class="right">
             <input type="number" id="x-coord" name="x-coord" required
@@ -23,6 +21,8 @@
             <input type="number" id="y-coord" name="y-coord" required
             maxlength="1" placeholder="Y-Coordinate">
             <button onclick="buttonClick()">Submit Coordinates</button>
+            <br><br>
+            <div id="clickedPoint">Clicked Point: </div>
         </div>
     </div>
     <h2>Acknowledgements</h2>
